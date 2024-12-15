@@ -1,7 +1,7 @@
 # Project information
 
 ## Main strong points:
-1. All objects represented in the YASF have been successfully rendered using the parser;
+1. All objects represented in the "Yet Another Scene Format" (YASF) file have been successfully rendered using the parser;
 2. Simple but effective 2D interface;
 3. Several Level of Detail (LOD) and mipmaps implemented;
 4. Lightweight scene;
