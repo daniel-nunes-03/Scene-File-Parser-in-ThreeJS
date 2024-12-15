@@ -1,0 +1,2622 @@
+{
+    "yasf": {
+        "globals": {
+            "background": { "r": 0, "g": 0, "b": 0 },
+            "ambient": { "r": 200, "g": 200, "b": 200, "intensity": 0.75 },
+            "fog": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "near": 1,
+                "far": 275
+            },
+            "skybox": {
+                "size": { "x": 100, "y": 100, "z": 100 },
+                "center": { "x": 0, "y": 0, "z": 0 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "intensity": 1,
+                "front": "scenes/demo/textures/TP2_SCENE/Skybox/SKYBOX_FRONT.jpg",
+                "back": "scenes/demo/textures/TP2_SCENE/Skybox/SKYBOX_BACK.jpg",
+                "up": "scenes/demo/textures/TP2_SCENE/Skybox/SKYBOX_TOP.jpg",
+                "down": "scenes/demo/textures/TP2_SCENE/Skybox/SKYBOX_BOTTOM.jpg",
+                "left": "scenes/demo/textures/TP2_SCENE/Skybox/SKYBOX_LEFT.jpg",
+                "right": "scenes/demo/textures/TP2_SCENE/Skybox/SKYBOX_RIGHT.jpg"
+            }
+        },
+        "cameras":{
+            "initial": "cam_perspective_monitors",
+            "cam_perspective": {
+                "type": "perspective",
+                "angle": 45,
+                "near": 0.1,
+                "far": 2000,
+                "location": {
+                    "x": 6,
+                    "y": 2.5,
+                    "z": 6
+                },
+                "target": {
+                    "x": 0,
+                    "y": 2.5,
+                    "z": 0
+                }
+            },
+            "cam_perspective_bookshelf": {
+                "type": "perspective",
+                "angle": 45,
+                "near": 0.1,
+                "far": 2000,
+                "location": {
+                    "x": 0,
+                    "y": 3,
+                    "z": 0
+                },
+                "target": {
+                    "x": 0,
+                    "y": 3,
+                    "z": -2.5
+                }
+            },
+            "cam_perspective_monitors": {
+                "type": "perspective",
+                "angle": 45,
+                "near": 0.1,
+                "far": 2000,
+                "location": {
+                    "x": 2,
+                    "y": 2,
+                    "z": 0
+                },
+                "target": {
+                    "x": -2.5,
+                    "y": 2,
+                    "z": 0
+                }
+            },
+            "cam_perspective_monitors_top": {
+                "type": "perspective",
+                "angle": 45,
+                "near": 0.1,
+                "far": 2000,
+                "location": { "x": -2.25, "y": 3, "z": 0 },
+                "target": { "x": -2.5, "y": 0, "z": 0 }
+            },
+            "cam_ortho_left": {
+                "type": "orthogonal",
+                "near": 0.1,
+                "far": 1000,
+                "location": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 15
+                },
+                "target": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "left": -5,
+                "right": 5,
+                "bottom": -5,
+                "top": 5
+            },
+            "cam_ortho_right": {
+                "type": "orthogonal",
+                "near": 0.1,
+                "far": 1000,
+                "location": {
+                    "x": 0,
+                    "y": 0,
+                    "z": -15
+                },
+                "target": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "left": -5,
+                "right": 5,
+                "bottom": -5,
+                "top": 5
+            }
+        },
+        "textures": {
+            "tex_wood_furniture": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Wood_Furniture.jpg"
+            },
+            "tex_wood_floor_diffuse": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Floor/Wood_Floor.jpg",
+                "mipmap0": "scenes/demo/textures/TP2_SCENE/Floor/mipmap_textures/Wood_Floor_512x512.jpg",
+                "mipmap1": "scenes/demo/textures/TP2_SCENE/Floor/mipmap_textures/Wood_Floor_512x512.jpg", 
+                "mipmap2": "scenes/demo/textures/TP2_SCENE/Floor/mipmap_textures/Wood_Floor_256x256.jpg", 
+                "mipmap3": "scenes/demo/textures/TP2_SCENE/Floor/mipmap_textures/Wood_Floor_128x128.jpg",
+                "mipmap4": "scenes/demo/textures/TP2_SCENE/Floor/mipmap_textures/Wood_Floor_64x64.jpg",
+                "mipmap5": "scenes/demo/textures/TP2_SCENE/Floor/mipmap_textures/Wood_Floor_32x32.jpg",
+                "mipmap6": "scenes/demo/textures/TP2_SCENE/Floor/mipmap_textures/Wood_Floor_16x16.jpg",
+                "mipmap7": "scenes/demo/textures/TP2_SCENE/Floor/mipmap_textures/Wood_Floor_8x8.jpg"
+            },
+            "tex_wood_floor_roughness": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Floor/Wood_Floor_Roughness.jpg"
+            },
+            "tex_wall_diffuse": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Wall_02_1k/PaintedPlaster011_1K-JPG_Color.jpg"
+            },
+            "tex_wall_roughness": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Wall_02_1k/PaintedPlaster011_1K-JPG_Roughness.jpg"
+            },
+            "tex_wall_bump": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Wall_02_1k/PaintedPlaster011_1K-JPG_NormalGL.jpg"
+            },
+            "tex_carpet": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Carpet.jpg"
+            },
+            "tex_acoustic_foam_diffuse": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Acoustic_foam_512x512/Acoustic_Foam_Diffuse.jpg"
+            },
+            "tex_acoustic_foam_bump": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Acoustic_foam_512x512/Acoustic_Foam_Normal.jpg"
+            },
+            "tex_acoustic_foam_specular": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Acoustic_foam_512x512/Acoustic_Foam_Roughness.jpg"
+            },
+            "tex_cushion": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Cushion_Diffuse.jpg"
+            },
+            "tex_photo_rui": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Student_Photos/CHATGPT_RUI.jpg"
+            },
+            "tex_photo_daniel": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/Student_Photos/CHATGPT_DANIEL.jpg"
+            },
+            "tex_book_cover_front_01": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/BOOKS/BOOK_COVER_FRONT_01.jpg"
+            },
+            "tex_book_cover_side_01": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/BOOKS/BOOK_COVER_SIDE_01.jpg"
+            },
+            "tex_book_cover_back_01": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/BOOKS/BOOK_COVER_BACK_01.jpg"
+            },
+            "tex_book_cover_front_02": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/BOOKS/BOOK_COVER_FRONT_02.jpg"
+            },
+            "tex_book_cover_side_02": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/BOOKS/BOOK_COVER_SIDE_02.jpg"
+            },
+            "tex_book_cover_back_02": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/BOOKS/BOOK_COVER_BACK_02.jpg"
+            },
+            "tex_book_paper_01": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/BOOKS/BOOK_PAPER_TEXTURE_01.jpg"
+            },
+            "tex_keyboard": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/KEYBOARD_DIFFUSE.jpg"
+            },
+            "tex_video_monitor_01": {
+                "filepath": "scenes/demo/textures/TP2_SCENE/WINDOWS_XP_LOADING.mp4",
+                "isVideo": true
+            }
+        },
+        "materials": {
+            "mat_wood_furniture": {
+                "color": { "r": 255.0, "g": 255.0, "b": 255.0 },
+                "emissive": { "r": 0.0, "g": 0.0, "b": 0.0 },
+                "specular": { "r": 200, "g": 200, "b": 200 },
+                "shininess": 5,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_wood_furniture",
+                "texlength_s": 2,
+                "texlength_t": 0.5,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_wood_floor": {
+                "color": { "r": 255.0, "g": 255.0, "b": 255.0 },
+                "emissive": { "r": 0.0, "g": 0.0, "b": 0.0 },
+                "specular": { "r": 200, "g": 200, "b": 200 },
+                "shininess": 5,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_wood_floor_diffuse",
+                "texlength_s": 4,
+                "texlength_t": 4,
+                "wireframe": false,
+                "twosided": false,
+                "bumpref": "tex_wood_floor_roughness",
+                "bumpscale": 0.1,
+                "specularref": "tex_wood_floor_roughness"
+            },
+            "mat_wall": {
+                "color": { "r": 100, "g": 100, "b": 100 },
+                "emissive": { "r": 0.0, "g": 0.0, "b": 0.0 },
+                "specular": { "r": 110.0, "g": 110, "b": 220.0 },
+                "shininess": 5,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_wall_diffuse",
+                "specularref": "tex_wall_roughness",
+                "bumpref": "tex_wall_displacement",
+                "bumpscale": 10,
+                "texlength_s": 4,
+                "texlength_t": 4,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_carpet": {
+                "color": { "r": 255.0, "g": 255.0, "b": 255.0 },
+                "emissive": { "r": 0.0, "g": 0.0, "b": 0.0 },
+                "specular": { "r": 110, "g": 110, "b": 110 },
+                "shininess": 5,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_carpet",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_acoustic_foam": {
+                "color": { "r": 200, "g": 200, "b": 200 },
+                "emissive": { "r": 0.0, "g": 0.0, "b": 0.0 },
+                "specular": { "r": 100, "g": 100, "b": 100 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_acoustic_foam_diffuse",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": false,
+                "bumpref": "tex_acoustic_foam_bump",
+                "bumpscale": 1.0,
+                "specularref": "tex_acoustic_foam_specular"
+            },
+            "mat_lamp_light": {
+                "color": { "r": 200, "g": 200, "b": 200 },
+                "emissive": { "r": 200, "g": 200, "b": 200 },
+                "specular": { "r": 10, "g": 10, "b": 10 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "null",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_lamp_metal": {
+                "color": { "r": 130, "g": 130, "b": 130 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 200, "g": 200, "b": 200 },
+                "shininess": 100,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "null",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_metal_grey": {
+                "color": { "r": 100, "g": 100, "b": 100 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 100, "g": 100, "b": 100 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "null",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": true
+            },
+            "mat_metal_black": {
+                "color": { "r": 10, "g": 10, "b": 10 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 100, "g": 100, "b": 100 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "null",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_metal_black_basket": {
+                "color": { "r": 10, "g": 10, "b": 10 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 100, "g": 100, "b": 100 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "null",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": true
+            },
+            "mat_cushion_black": {
+                "color": { "r": 50, "g": 50, "b": 50 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 100, "g": 100, "b": 100 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_cushion",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_photo_rui": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 100, "g": 100, "b": 100 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_photo_rui",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_photo_daniel": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 100, "g": 100, "b": 100 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_photo_daniel",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_book_cover_front_01": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 0, "g": 0, "b": 0 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_book_cover_front_01",
+                "texlength_s": 0.4,
+                "texlength_t": 0.52,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_book_cover_back_01": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 0, "g": 0, "b": 0 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_book_cover_back_01",
+                "texlength_s": 0.5,
+                "texlength_t": 0.503,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_book_cover_side_01": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 0, "g": 0, "b": 0 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_book_cover_side_01",
+                "texlength_s": 0.05,
+                "texlength_t": 0.61,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_book_cover_front_02": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 0, "g": 0, "b": 0 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_book_cover_front_02",
+                "texlength_s": 0.405,
+                "texlength_t": 0.5,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_book_cover_back_02": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 0, "g": 0, "b": 0 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_book_cover_back_02",
+                "texlength_s": 0.4,
+                "texlength_t": 0.505,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_book_cover_side_02": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 0, "g": 0, "b": 0 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_book_cover_side_02",
+                "texlength_s": 0.05,
+                "texlength_t": 0.5,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_book_paper_01": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 0, "g": 0, "b": 0 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_book_paper_01",
+                "texlength_s": 1,
+                "texlength_t": 0.1,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_keyboard": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 0, "g": 0, "b": 0 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_keyboard",
+                "texlength_s": 0.598,
+                "texlength_t": 0.25,
+                "wireframe": false,
+                "twosided": false
+            },
+            "mat_video_monitor_01": {
+                "color": { "r": 255, "g": 255, "b": 255 },
+                "emissive": { "r": 0, "g": 0, "b": 0 },
+                "specular": { "r": 0, "g": 0, "b": 0 },
+                "shininess": 0,
+                "transparent": false,
+                "opacity": 0.8,
+                "textureref": "tex_video_monitor_01",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "wireframe": false,
+                "twosided": false
+            }
+        },
+        "graph": {
+            "rootid": "scene",
+            "scene": {
+                "type": "node",
+                "children": {
+                    "spotlight": {
+                        "type": "spotlight",
+                        "color": {
+                            "r": 255,
+                            "g": 255,
+                            "b": 255
+                        },
+                        "intensity": 1,
+                        "distance": 100,
+                        "angle": 20,
+                        "penumbra": 0,
+                        "decay": 0,
+                        "castshadow": true,
+                        "shadowmapsize": 128,
+                        "position": {
+                            "x": 33.75,
+                            "y": 37.3,
+                            "z": 33.75
+                        },
+                        "target": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "enabled": false
+                    },
+                    "nodesList": [
+                        "floor",
+                        "walls",
+                        "roof",
+                        "table",
+                        "carpet",
+                        "bookshelf",
+                        "frames",
+                        "fan_roof",
+                        "keyboard",
+                        "monitors",
+                        "acoustic_foams",
+                        "wall_lamp",
+                        "gaming_chair",
+                        "wastebasket",
+                        "moth_01"
+                    ]
+                }
+            },
+
+            "floor": {
+                "type": "node",
+                "receiveshadow": true,
+                "transform": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } }  
+                ],
+                "materialref": {
+                    "materialId": "mat_wood_floor"
+                },
+                "children": {
+                    "nodesList": [
+                        "rectangle_floor"
+                    ]
+                }
+            },
+            "rectangle_floor": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": -90, "y": 0, "z": 0 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -2.5, "y": -2.5 },
+                        "xy2": { "x": 2.5, "y": 2.5 }
+                    }
+                }
+            },
+
+
+            "walls": {
+                "type": "node",
+                "castshadow": false,
+                "receiveshadow": false,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 2.5, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_wall"
+                },
+                "children": {
+                    "nodesList": [
+                        "rectangle_wall_left",
+                        "rectangle_wall_right",
+                        "rectangle_wall_front",
+                        "rectangle_wall_back"
+                    ]
+                }
+            },
+            "rectangle_wall_left": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 2.5 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 180, "z": 0 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -2.5, "y": -2.5 },
+                        "xy2": { "x": 2.5, "y": 2.5 }
+                    }
+                }
+            },
+            "rectangle_wall_right": {
+                "type": "node",
+                "transforms": [
+                        { "type": "translate", "amount": { "x": 0, "y": 0, "z": -2.5 } },
+                        { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -2.5, "y": -2.5 },
+                        "xy2": { "x": 2.5, "y": 2.5 }
+                    }
+                }
+            },
+            "rectangle_wall_front": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2.5, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 90, "z": 0 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -2.5, "y": -2.5 },
+                        "xy2": { "x": 2.5, "y": 2.5 }
+                    }
+                }
+            },
+            "rectangle_wall_back": {
+                "type": "node",
+                "transforms": [
+                        { "type": "translate", "amount": { "x": 2.5, "y": 0, "z": 0 } },
+                        { "type": "rotate", "amount": { "x": 0, "y": -90, "z": 0 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -2.5, "y": -2.5 },
+                        "xy2": { "x": 2.5, "y": 2.5 }
+                    }
+                }
+            },
+
+
+            "roof": {
+                "type": "node",
+                "castshadow": false,
+                "receiveshadow": false,
+                "transforms": [
+                        { "type": "translate", "amount": { "x": 0, "y": 5, "z": 0 } },
+                        { "type": "rotate", "amount": { "x": 90, "y": 0, "z": 0 } },
+                        { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_wall"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -2.5, "y": -2.5 },
+                        "xy2": { "x": 2.5, "y": 2.5 }
+                    },
+                    "directional_light": {
+                        "type": "directionallight",
+                        "color": { "r": 255, "g": 255, "b": 255 },
+                        "position": { "x": 0, "y": 0, "z": 0 },
+                        "shadowleft": -10,
+                        "shadowright": 10,
+                        "shadowbottom": -10,
+                        "shadowtop": 10,
+                        "enabled": false
+                    }
+                }
+            },
+
+
+            "table": {
+                "type": "node",
+                "castshadow": true,
+                "receiveshadow": true,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2, "y":0.3, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_wood_furniture"
+                },
+                "children": {
+                    "nodesList": [
+                        "table_top",
+                        "table_leg_left_01",
+                        "table_leg_left_02",
+                        "table_leg_right_01",
+                        "table_leg_right_02"
+                    ]
+                }
+            },
+            "table_top": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.5, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 0.1, "z": 2 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "table_leg_left_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.4, "y": 0.1, "z": 0.9 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.1, "y": 0.8, "z": 0.1 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "table_leg_left_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.4, "y": 0.1, "z": 0.9 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.1, "y": 0.8, "z": 0.1 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "table_leg_right_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.4, "y": 0.1, "z": -0.9 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.1, "y": 0.8, "z": 0.1 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "table_leg_right_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.4, "y": 0.1, "z": -0.9 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.1, "y": 0.8, "z": 0.1 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+
+
+            "carpet": {
+                "type": "node",
+                "castshadow": false,
+                "receiveshadow": false,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 1, "y": 0.0125, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 2, "y": 0.025, "z": 3 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_carpet"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+
+
+            "bookshelf": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 2.5, "z": -2.25 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bookshelf_wood",
+                        "bookshelf_guard_01",
+                        "bookshelf_guard_02",
+                        "books"
+                    ]
+                }
+            },
+            "bookshelf_guard_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.95, "y": -1.475, "z": -0.25 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 0.5, "y": 0.5, "z": 0.5 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bookshelf_guard_01_triangle_01",
+                        "bookshelf_guard_01_triangle_02",
+                        "bookshelf_guard_01_square_01"
+                    ]
+                }
+            },
+            "bookshelf_guard_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.9, "y": -1.475, "z": -0.25 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 0.5, "y": 0.5, "z": 0.5 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bookshelf_guard_01_triangle_01",
+                        "bookshelf_guard_01_triangle_02",
+                        "bookshelf_guard_01_square_01"
+                    ]
+                }
+            },
+            "bookshelf_guard_01_square_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 1, "y": 0, "z": 3 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 45, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_wood_furniture"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": 2.85, "y": 0 },
+                        "xy2": { "x": 4.243, "y": 0.1 }
+                    }
+                }
+            },
+            "bookshelf_guard_01_triangle_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_wood_furniture"
+                },
+                "children": {
+                    "triangle_prim": {
+                        "type": "triangle",
+                        "xyz1": { "x": 3, "y": 0, "z": 0 },
+                        "xyz2": { "x": 4, "y": 0, "z": 0 },
+                        "xyz3": { "x": 3, "y": 0, "z": 1 }
+                    }
+                }
+            },
+            "bookshelf_guard_01_triangle_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.1, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": -1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_wood_furniture"
+                },
+                "children": {
+                    "triangle_prim": {
+                        "type": "triangle",
+                        "xyz1": { "x": 3, "y": 0, "z": 0 },
+                        "xyz2": { "x": 4, "y": 0, "z": 0 },
+                        "xyz3": { "x": 3, "y": 0, "z": 1 }
+                    }
+                }
+            },
+            "bookshelf_wood": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 2, "y": 0.075, "z": 0.5 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_wood_furniture"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "books": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "book_01",
+                        "book_02",
+                        "book_03",
+                        "book_04",
+                        "book_05"
+                    ]
+                }
+            },
+            "book_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.7525, "y": 0.32, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1.4, "y": 1.15, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "book_prim_02"
+                    ]
+                }
+            },
+            "book_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.675, "y": 0.32, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1.6, "y": 1.15, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "book_prim_01"
+                    ]
+                }
+            },
+            "book_03": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.2, "y": 0.3, "z": -0.155 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 90, "z": -20 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1.1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "book_prim_02"
+                    ]
+                }
+            },
+            "book_04": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.815, "y": 0.29, "z": -0.03 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 3 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "book_prim_01"
+                    ]
+                }
+            },
+            "book_05": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.8725, "y": 0.29, "z": -0.03 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 5 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "book_prim_01"
+                    ]
+                }
+            },
+            "book_prim_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 90, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "book_base_cover_front_01",
+                        "book_base_cover_back_01",
+                        "book_base_cover_side_01",
+                        "book_base_paper_top_01",
+                        "book_base_paper_bottom_01",
+                        "book_base_paper_side_01"
+                    ]
+                }
+            },
+            "book_prim_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 90, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "book_base_cover_front_02",
+                        "book_base_cover_back_02",
+                        "book_base_cover_side_02",
+                        "book_base_paper_top_01",
+                        "book_base_paper_bottom_01",
+                        "book_base_paper_side_01"
+                    ]
+                }
+            },
+            "book_base_paper_top_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.2525, "z": -0.025 } },
+                    { "type": "rotate", "amount": { "x": -90, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_book_paper_01"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.2, "y": -0.025 },
+                        "xy2": { "x": 0.2, "y": 0.025 }
+                    }
+                }
+            },
+            "book_base_paper_bottom_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": -0.2525, "z": -0.025 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_book_paper_01"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.2, "y": -0.025 },
+                        "xy2": { "x": 0.2, "y": 0.025 }
+                    }
+                }
+            },
+            "book_base_paper_side_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.2, "y": 0, "z": -0.025 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 90, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_book_paper_01"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.2525, "y": -0.025 },
+                        "xy2": { "x": 0.2525, "y": 0.025 }
+                    }
+                }
+            },
+            "book_base_cover_front_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_book_cover_front_01"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.2, "y": -0.2525 },
+                        "xy2": { "x": 0.2, "y": 0.2525 }
+                    }
+                }
+            },
+            "book_base_cover_back_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": -0.05 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 180, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_book_cover_back_01"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.2, "y": -0.2525 },
+                        "xy2": { "x": 0.2, "y": 0.2525 }
+                    }
+                }
+            },
+            "book_base_cover_side_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.2, "y": 0, "z": -0.025 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": -90, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_book_cover_side_01"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.025, "y": -0.2525 },
+                        "xy2": { "x": 0.025, "y": 0.2525 }
+                    }
+                }
+            },
+            "book_base_cover_front_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_book_cover_front_02"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.2, "y": -0.2525 },
+                        "xy2": { "x": 0.2, "y": 0.2525 }
+                    }
+                }
+            },
+            "book_base_cover_back_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": -0.05 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 180, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_book_cover_back_02"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.2, "y": -0.2525 },
+                        "xy2": { "x": 0.2, "y": 0.2525 }
+                    }
+                }
+            },
+            "book_base_cover_side_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.2, "y": 0, "z": -0.025 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": -90, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_book_cover_side_02"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.025, "y": -0.2525 },
+                        "xy2": { "x": 0.025, "y": 0.2525 }
+                    }
+                }
+            },
+
+
+            "frames": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.01, "y": 1, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 90, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "frame_daniel",
+                        "frame_rui"
+                    ]
+                }
+            },
+            "frame_daniel": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -1.5, "y": 1.5, "z": -2.5 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1.2, "y": 1.25, "z": 0.1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_photo_daniel"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            },
+            "frame_rui": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 1.5, "y": 1.5, "z": -2.5 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1.2, "y": 1.25, "z": 0.1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_photo_rui"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            },
+
+
+            "fan_roof": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 4.5, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "nodesList": [
+                        "fan_support",
+                        "motor",
+                        "blade_01",
+                        "blade_02",
+                        "blade_03"
+                    ]
+                }
+            },
+            "fan_support": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.25, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 0.05,
+                        "top": 0.05,
+                        "height": 0.5,
+                        "slices": 8,
+                        "stacks": 1
+                    }
+                }
+            },
+            "motor": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 0.1,
+                        "top": 0.1,
+                        "height": 0.3,
+                        "slices": 8,
+                        "stacks": 1
+                    }
+                }
+            },
+            "blade_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 2.5, "y": 0.05, "z": 0.2 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "blade_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 120, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 2.5, "y": 0.05, "z": 0.2 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "blade_03": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": -120, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 2.5, "y": 0.05, "z": 0.2 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+
+
+            "keyboard": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2, "y": 0.85, "z": 0.3 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 87, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "keyboard_base",
+                        "keyboard_keys"
+                    ]
+                }
+            },
+            "keyboard_keys": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.031, "z": 0.25 } },
+                    { "type": "rotate", "amount": { "x": -90, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_keyboard"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": {"x": 0, "y": 0},
+                        "xy2": {"x": 0.6, "y": 0.25}
+                    }
+                }
+            },
+            "keyboard_base": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": 0, "y": 0, "z": 0 },
+                        "xyz2": { "x": 0.6, "y": 0.03, "z": 0.25 }
+                    }
+                }
+            },
+
+
+            "monitors": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2.5, "y": 0.9, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": -90, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.6, "y": 0.6, "z": 0.6 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "monitor_01",
+                        "monitor_02",
+                        "monitor_stand_01",
+                        "monitor_stand_02"
+                    ]
+                }
+            }, 
+            "monitor_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -1, "y": 0.76, "z": -0.725 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": -25, "z": 2 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "monitor_01_spotlight": {   
+                        "type": "spotlight",
+                        "color": { "r": 200, "g": 200, "b": 200 },
+                        "intensity": 1,
+                        "distance": 1000,
+                        "angle": 45,
+                        "penumbra": 1,
+                        "decay": 0.2,
+                        "castshadow": true,
+                        "shadowmapsize": 256,
+                        "position": { "x": 0, "y": 1.5, "z": 0 },
+                        "target": { "x": 0, "y": 1.5, "z": 0.5 },
+                        "enabled": false
+                    },
+                    "nodesList": [
+                        "monitor_frame",
+                        "monitor_screen"
+                    ]
+                }
+            },
+            "monitor_02": {
+                "type": "node",
+                "castshadow": false,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.8, "y": 0.8, "z": -0.7 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 15, "z": -1.5 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "monitor_02_spotlight": {   
+                        "type": "spotlight",
+                        "color": { "r": 200, "g": 200, "b": 200 },
+                        "intensity": 1,
+                        "distance": 1000,
+                        "angle": 45,
+                        "penumbra": 1,
+                        "decay": 0.2,
+                        "castshadow": true,
+                        "shadowmapsize": 256,
+                        "position": { "x": 0, "y": 1.5, "z": 0 },
+                        "target": { "x": 0, "y": 1.5, "z": -0.3 },
+                        "enabled": false
+                    },
+                    "nodesList": [
+                        "monitor_frame",
+                        "monitor_screen"
+                    ]
+                }
+            },
+            "monitor_frame": {
+                "type": "node",
+                "transforms": [
+                    { "type": "scale", "amount": { "x": 1.8, "y": 1, "z": 0.1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "monitor_screen": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": -0.051 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 180, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1.7, "y": 0.9, "z": 0.05 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_video_monitor_01"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            },
+            "monitor_stand_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -1.1, "y": 0.75, "z": -0.3899 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 195, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.2, "y": 0.5, "z": 0.2 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "nodesList": [
+                        "monitor_stand_arm_01",
+                        "monitor_stand_arm_02",
+                        "monitor_stand_cylinder_01",
+                        "monitor_stand_cylinder_02",
+                        "monitor_stand_connect_wall_01"
+                    ]
+                }
+            },
+            "monitor_stand_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.8, "y": 0.75, "z": -0.275 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.2, "y": 0.5, "z": 0.2 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "nodesList": [
+                        "monitor_stand_arm_01",
+                        "monitor_stand_arm_02",
+                        "monitor_stand_cylinder_01",
+                        "monitor_stand_cylinder_02",
+                        "monitor_stand_connect_wall_02"
+                    ]
+                }
+            },
+            "monitor_stand_arm_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.6, "y": 0, "z": 0.6 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 0, "z": 45 } },
+                    { "type": "scale", "amount": { "x": 0.2, "y": 2, "z": 0.3 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "monitor_stand_arm_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": -1 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.2, "y": 2, "z": 0.3 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "monitor_stand_connect_wall_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": -1.9 } },
+                    { "type": "rotate", "amount": { "x":0 , "y": -195, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 0.25 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "monitor_stand_connect_wall_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -1.05, "y": 0, "z": 1.25 } },
+                    { "type": "rotate", "amount": { "x":0 , "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 0.25 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "monitor_stand_cylinder_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.3, "y": 0.4, "z": 0.3 } }
+                ],
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 1.0,
+                        "top": 1.0,
+                        "height": 1.0,
+                        "slices": 8,
+                        "stacks": 1
+                    }
+                }
+            },
+            "monitor_stand_cylinder_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.2, "y": 0.45, "z": 0.2 } }
+                ],
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 1.0,
+                        "top": 1.0,
+                        "height": 1.0,
+                        "slices": 8,
+                        "stacks": 1
+                    }
+                }
+            },
+
+
+            "acoustic_foams": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "mat_acoustic_foam"
+                },
+                "children": {
+                    "nodesList": [
+                        "acoustic_foam_01",
+                        "acoustic_foam_02",
+                        "acoustic_foam_03",
+                        "acoustic_foam_04",
+                        "acoustic_foam_05",
+                        "acoustic_foam_06"
+                    ]
+                }
+            },     
+            "acoustic_foam_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2.48, "y": 2.5, "z": 0.5 } },
+                    { "type": "rotate", "amount": { "x": 45, "y": 0, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 0.5, "y": 0.025, "z": 0.5 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "acoustic_foam_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2.48, "y": 2.5, "z": -0.5 } },
+                    { "type": "rotate", "amount": { "x": 45, "y": 0, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 0.5, "y": 0.025, "z": 0.5 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "acoustic_foam_03": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2.48, "y": 2, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 45, "y": 0, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 0.5, "y": 0.025, "z": 0.5 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "acoustic_foam_04": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2.48, "y": 3.5, "z": 0.5 } },
+                    { "type": "rotate", "amount": { "x": 45, "y": 0, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 0.5, "y": 0.025, "z": 0.5 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "acoustic_foam_05": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2.48, "y": 3.5, "z": -0.5 } },
+                    { "type": "rotate", "amount": { "x": 45, "y": 0, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 0.5, "y": 0.025, "z": 0.5 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "acoustic_foam_06": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2.48, "y": 4, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 45, "y": 0, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 0.5, "y": 0.025, "z": 0.5 } }
+                ],
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+
+            
+            "wall_lamp": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2.3, "y": 3, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "spot_light_wall_lamp_monitor": {
+                        "type": "spotlight",
+                        "color": { "r": 200, "g": 200, "b": 200 },
+                        "intensity": 2,
+                        "distance": 1000,
+                        "angle": 35,
+                        "penumbra": 1,
+                        "decay": 1,
+                        "castshadow": true,
+                        "shadowmapsize": 256,
+                        "position": { "x": -2.3, "y": 3, "z": 0 },
+                        "target": { "x": -2.3, "y": 0, "z": 0 },
+                        "enabled": false
+                    },
+                    "nodesList": [
+                        "wall_lamp_base",
+                        "wall_lamp_arm",
+                        "wall_lamp_emissive_plane"
+                    ]
+                }
+            },
+            "wall_lamp_base": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.075, "y": 0.03, "z": 0.4 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_lamp_metal"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "wall_lamp_arm": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.1, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.2, "y": 0.02, "z": 0.04 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_lamp_metal"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "wall_lamp_emissive_plane": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": -0.0151, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 0, "z": 90 } },
+                    { "type": "scale", "amount": { "x": 0.35, "y": 0.03, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_lamp_light"
+                },
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            },
+
+
+            "gaming_chair": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.6, "y": 0, "z": -0.7 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": -30, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.5, "y": 0.5, "z": 0.5 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "support_connect_seat_backrest",
+                        "seat",
+                        "backrest",
+                        "armrests",
+                        "base"
+                    ]
+                }
+            },
+            "support_connect_seat_backrest": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 1.5, "z": -0.5 } },
+                    { "type": "scale", "amount": { "x": 0.3, "y": 0.7, "z": 0.1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "seat": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 1.125, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1.2, "y": 0.2, "z": 1.2 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_cushion_black"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "backrest": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 2.25, "z": -0.5 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1.5, "z": 0.2 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_cushion_black"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "armrests": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 1.55, "z": 0.15 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "armrest_01",
+                        "armrest_02",
+                        "armrest_support_01",
+                        "armrest_support_02",
+                        "armrest_horizontal_support_01",
+                        "armrest_horizontal_support_02"
+                    ]
+                }
+            },
+            "armrest_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.7, "y": 0.3, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.4, "y": 0.1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "armrest_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.7, "y": 0.3, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.4, "y": 0.1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "armrest_support_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.575, "y": -0.1, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 15 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "cylinder_support_01": {
+                        "type": "cylinder",
+                        "base": 0.055,
+                        "top": 0.055,
+                        "height": 0.7,
+                        "slices": 8,
+                        "stacks": 1
+                    }
+                }
+            },
+            "armrest_support_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.575, "y": -0.1, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": -15 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "cylinder_support_02": {
+                        "type": "cylinder",
+                        "base": 0.055,
+                        "top": 0.055,
+                        "height": 0.7,
+                        "slices": 8,
+                        "stacks": 1
+                    }
+                }
+            },
+            "armrest_horizontal_support_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.65, "y": 0.225, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.15, "y": 0.05, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "armrest_horizontal_support_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.65, "y": 0.225, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.15, "y": 0.05, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "box_prim": { 
+                        "type": "box", 
+                        "xyz1": { "x": -0.5, "y": -0.5, "z": -0.5 },
+                        "xyz2": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    }
+                }
+            },
+            "base": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.32, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 0.8, "y": 0.8, "z": 0.8 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "cylinder_connect_base_seat",
+                        "cylinder_base",
+                        "wheel_01",
+                        "wheel_02",
+                        "wheel_03",
+                        "wheel_04",
+                        "wheel_05"
+                    ]
+                }
+            },
+            "cylinder_connect_base_seat": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.5, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 0.1,
+                        "top": 0.1,
+                        "height": 0.8,
+                        "slices": 8,
+                        "stacks": 1
+                    }
+                }
+            },
+            "cylinder_base": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.05, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 1.0,
+                        "top": 1.0,
+                        "height": 0.15,
+                        "slices":32,
+                        "stacks": 1
+                    }
+                }
+            },
+            "wheel_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.6, "y": -0.2, "z": 0.6 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 0, "z": -70 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "lodsList": [
+                        "wheel_prim_lods"
+                    ]
+                }
+            },
+            "wheel_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.6, "y": -0.2, "z": 0.6 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "lodsList": [
+                        "wheel_prim_lods"
+                    ]
+                }
+            },
+            "wheel_03": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.6, "y": -0.2, "z": -0.6 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 0, "z": -23 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "lodsList": [
+                        "wheel_prim_lods"
+                    ]
+                }
+            },
+            "wheel_04": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.6, "y": -0.2, "z": -0.6 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 0, "z": 45 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "lodsList": [
+                        "wheel_prim_lods"
+                    ]
+                }
+            },
+            "wheel_05": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": -0.2, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 0, "z": 10 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "lodsList": [
+                        "wheel_prim_lods"
+                    ]
+                }
+            },    
+
+            "wheel_prim_lods": {
+                "type": "lod",
+                "lodNodes": [
+                    { "nodeId": "wheel_prim_lod_0", "mindist": 0 },
+                    { "nodeId": "wheel_prim_lod_1", "mindist": 4 },
+                    { "nodeId": "wheel_prim_lod_2", "mindist": 6 }
+                ]
+            },
+            "wheel_prim_lod_0": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "wheel_prim_lod_0_guard",
+                        "wheel_prim_lod_0_cylinder_01",
+                        "wheel_prim_lod_0_cylinder_02"
+                    ]
+                }
+            },
+            "wheel_prim_lod_0_cylinder_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.05, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "cylinder_prim_01": {
+                        "type": "cylinder",
+                        "base": 0.2,
+                        "top": 0.2,
+                        "height": 0.25,
+                        "slices": 16,
+                        "stacks": 1
+                    }
+                }
+            },
+            "wheel_prim_lod_0_cylinder_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.05, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_grey"
+                },
+                "children": {
+                    "cylinder_prim_02": {
+                        "type": "cylinder",
+                        "base": 0.075,
+                        "top": 0.075,
+                        "height": 0.3,
+                        "slices": 8,
+                        "stacks": 1
+                    }
+                }
+            },
+            "wheel_prim_lod_0_guard": {
+                "type": "node",
+                "receiveshadow": false,
+                "castshadow": false,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -0.25, "y": -0.05, "z": -0.02 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 90, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1.3 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_grey"
+                },
+                "children": {
+                    "nurb__01": {
+                        "type": "nurbs",
+                        "degree_u": 1,
+                        "degree_v": 2,
+                        "parts_u": 10,
+                        "parts_v": 10,
+                        "controlpoints": [
+                            { "x": 0, "y": 0, "z": 0 },
+                            { "x": 0.4, "y": 0, "z": 0.2 },
+                            { "x": 0, "y": 0, "z": 0.4 },
+
+                            { "x": 0, "y": 0.2, "z": 0 },
+                            { "x": 0.4, "y": 0.2, "z": 0.2 },
+                            { "x": 0, "y": 0.2, "z": 0.4 }
+                        ]
+                    }
+                }
+            },
+            "wheel_prim_lod_1": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 0.2,
+                        "top": 0.2,
+                        "height": 0.25,
+                        "slices": 8,
+                        "stacks": 1
+                    }
+                }
+            },
+            "wheel_prim_lod_2": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 0.2,
+                        "top": 0.2,
+                        "height": 0.25,
+                        "slices": 6,
+                        "stacks": 1
+                    }
+                }
+            },     
+
+
+            "wastebasket": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -1.5, "y": 0, "z": 1.2 } },
+                    { "type": "scale", "amount": { "x": 0.3, "y": 0.5, "z": 0.3 } }
+                ],
+                "children": {
+                    "lodsList": [
+                        "wastebasket_body"
+                    ]
+                }
+            },
+            "wastebasket_base": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.025, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 0.4,
+                        "top": 0.4,
+                        "height": 0.05,
+                        "slices": 16,
+                        "stacks": 1,
+                        "capsclose": false
+                    }
+                }
+            },
+            "wastebasket_body": {
+                "type": "lod",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black_basket"
+                },
+                "lodNodes": [
+                    { "nodeId": "wastebasket_lod_01", "mindist": 0 },
+                    { "nodeId": "wastebasket_lod_02", "mindist": 6 }
+                ]
+            },
+            "wastebasket_lod_01": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "wastebasket_nurb_01",
+                        "wastebasket_nurb_02",
+                        "wastebasket_base"
+                    ]
+                }
+            },
+            "wastebasket_lod_02": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0.4, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black_basket"
+                },
+                "children": {
+                    "cylinder_prim": {
+                        "type": "cylinder",
+                        "base": 0.4,
+                        "top": 0.4,
+                        "height": 0.8,
+                        "slices": 4,
+                        "stacks": 1
+                    }
+                }
+            },
+            "wastebasket_nurb_01": {
+                "type": "node",
+                "receiveshadow": false,
+                "castshadow": false,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": -0.4 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black_basket"
+                },
+                "children": {
+                    "nurb__01": {
+                        "type": "nurbs",
+                        "degree_u": 1,
+                        "degree_v": 4,
+                        "parts_u": 10,
+                        "parts_v": 10,
+                        "controlpoints": [
+                            { "x": 0, "y": 0, "z": 0 },
+                            { "x": 0.2, "y": 0, "z": -0.05 },
+                            { "x": 0.8, "y": 0, "z": 0.4 },
+                            { "x": 0.2, "y": 0, "z": 0.85 },
+                            { "x": 0, "y": 0, "z": 0.8 },
+
+                            { "x": 0, "y": 0.8, "z": 0 },
+                            { "x": 0.2, "y": 0.8, "z": -0.05 },
+                            { "x": 0.8, "y": 0.8, "z": 0.4 },
+                            { "x": 0.2, "y": 0.8, "z": 0.85 },
+                            { "x": 0, "y": 0.8, "z": 0.8 }
+                        ]
+                    }
+                }
+            },
+            "wastebasket_nurb_02": {
+                "type": "node",
+                "receiveshadow": false,
+                "castshadow": false,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0.4 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 180, "z": 0 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black_basket"
+                },
+                "children": {
+                    "nurb__01": {
+                        "type": "nurbs",
+                        "degree_u": 1,
+                        "degree_v": 4,
+                        "parts_u": 10,
+                        "parts_v": 10,
+                        "controlpoints": [
+                            { "x": 0, "y": 0, "z": 0 },
+                            { "x": 0.2, "y": 0, "z": -0.05 },
+                            { "x": 0.8, "y": 0, "z": 0.4 },
+                            { "x": 0.2, "y": 0, "z": 0.85 },
+                            { "x": 0, "y": 0, "z": 0.8 },
+
+                            { "x": 0, "y": 0.8, "z": 0 },
+                            { "x": 0.2, "y": 0.8, "z": -0.05 },
+                            { "x": 0.8, "y": 0.8, "z": 0.4 },
+                            { "x": 0.2, "y": 0.8, "z": 0.85 },
+                            { "x": 0, "y": 0.8, "z": 0.8 }
+                        ]
+                    }
+                }
+            },
+
+
+            "moth_01": {
+                "type": "node",
+                "castshadow": true,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": -2, "y": 3, "z": 1 } },
+                    { "type": "rotate", "amount": { "x": 90, "y": 45, "z": 15 } },
+                    { "type": "scale", "amount": { "x": 0.2, "y": 0.2, "z": 0.2 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "moth_wing_01",
+                        "moth_wing_02",
+                        "moth_body"
+                    ]
+                }
+            },
+            "moth_wing_01": {
+                "type": "node",
+                "castshadow": false,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 90, "z": 0 } }
+                ],
+                "children": {
+                    "polygon_prim": {
+                        "type": "polygon",
+                        "radius": 0.5,
+                        "stacks": 3,
+                        "slices": 5,
+                        "color_c": { "r": 0, "g": 0, "b": 255 },
+                        "color_p": { "r": 0, "g": 255, "b": 0 }
+                    }
+                }
+            },
+            "moth_wing_02": {
+                "type": "node",
+                "castshadow": false,
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0.404, "y": 0, "z": 0.404 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } }
+                ],
+                "children": {
+                    "polygon_prim": {
+                        "type": "polygon",
+                        "radius": 0.5,
+                        "stacks": 3,
+                        "slices": 5,
+                        "color_c": { "r": 0, "g": 0, "b": 255 },
+                        "color_p": { "r": 0, "g": 255, "b": 0 }
+                    }
+                }
+            },
+            "moth_body": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0.404 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 4, "z": 1 } }
+                ],
+                "materialref": {
+                    "materialId": "mat_metal_black"
+                },
+                "children": {
+                    "sphere_prim": {
+                        "type": "sphere",        
+                        "radius": 0.15,
+                        "slices": 7,
+                        "stacks": 5
+                    }
+                }
+            },
+
+
+            "box": {
+                "type": "node",
+                "transforms": [
+                    { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                    { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "nodesList": [
+                        "rectangle_box_left",
+                        "rectangle_box_right",
+                        "rectangle_box_top",
+                        "rectangle_box_bottom",
+                        "rectangle_box_front",
+                        "rectangle_box_back"
+                    ]
+                }
+            },
+            "rectangle_box_left": {
+                "type": "node",
+                "transforms": [
+                        { "type": "translate", "amount": { "x": 0, "y": 0, "z": 0.5 } },
+                        { "type": "rotate", "amount": { "x": 0, "y": 0, "z": 0 } },
+                        { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            },
+            "rectangle_box_right": {
+                "type": "node",
+                "transforms": [
+                        { "type": "translate", "amount": { "x": 0, "y": 0, "z": -0.5 } },
+                        { "type": "rotate", "amount": { "x": 0, "y": -180, "z": 0 } },
+                        { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            },
+            "rectangle_box_top": {
+                "type": "node",
+                "transforms": [
+                        { "type": "translate", "amount": { "x": 0, "y": 0.5, "z": 0 } },
+                        { "type": "rotate", "amount": { "x": -90, "y": 0, "z": 0 } },
+                        { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            },
+            "rectangle_box_bottom": {
+                "type": "node",
+                "transforms": [
+                        { "type": "translate", "amount": { "x": 0, "y": -0.5, "z": 0 } },
+                        { "type": "rotate", "amount": { "x": 90, "y": 0, "z": 0 } },
+                        { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            },
+            "rectangle_box_front": {
+                "type": "node",
+                "transforms": [
+                        { "type": "translate", "amount": { "x": -0.5, "y": 0, "z": 0 } },
+                        { "type": "rotate", "amount": { "x": 0, "y": -90, "z": 0 } },
+                        { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            },
+            "rectangle_box_back": {
+                "type": "node",
+                "transforms": [
+                        { "type": "translate", "amount": { "x": 0.5, "y": 0, "z": 0 } },
+                        { "type": "rotate", "amount": { "x": 0, "y": 90, "z": 0 } },
+                        { "type": "scale", "amount": { "x": 1, "y": 1, "z": 1 } }
+                ],
+                "children": {
+                    "rectangle_prim": {
+                        "type": "rectangle",
+                        "xy1": { "x": -0.5, "y": -0.5 },
+                        "xy2": { "x": 0.5, "y": 0.5 }
+                    }
+                }
+            }
+        }
+    }
+}
