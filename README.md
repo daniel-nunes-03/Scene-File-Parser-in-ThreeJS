@@ -8,6 +8,8 @@
 5. Code structure that is easy to read and debug;
 
 ## Rendered Scene File:
+The scene file used for testing this parser was made by [Rui Martins](https://github.com/RuiMartins2021).
+
 The rendered scene represents an office furnished with:
 - 1 table with:
 	- 2 monitors (with running videos on the screen) and respective supports;
